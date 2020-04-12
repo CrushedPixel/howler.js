@@ -2138,7 +2138,9 @@
      * @param  {Number} id The id of the sound. If none is passed, return the first.
      * @returns The download progress of the sound.
      */
-    progress: function(id=0) {
+    progress: function(id) {
+      if (id === undefined) id = 0;
+
       var self = this;
 
       // Get the sound.
